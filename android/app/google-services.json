@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "830202034651",
+    "project_id": "risk-resq",
+    "storage_bucket": "risk-resq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830202034651:android:721e8bfe40d8d1fa4fcffe",
+        "android_client_info": {
+          "package_name": "com.disastermanagement.risk_resq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830202034651-0plk1ep3nvfvm7ipachu75g37v79f6sf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxWyq80WeECCJ8ygpghS1p2qlN9Dvto7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830202034651-0plk1ep3nvfvm7ipachu75g37v79f6sf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "830202034651-7c9rpq26aehi0tqqsn41lt8h1ru69jks.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.disastermanagement.riskResq"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
