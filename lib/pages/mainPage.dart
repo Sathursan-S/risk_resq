@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:risk_resq/methods/commonMethods.dart';
 import 'package:risk_resq/models/alerts.dart';
@@ -46,45 +47,24 @@ class _MainPageState extends State<MainPage> {
       key: _scaffoldKey,
       appBar: CustomAppBar(scaffoldKey: _scaffoldKey, title: titles[_currentIndex]),
       drawer: CustomDrawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        //backgroundColor: Colors.black,
-        currentIndex: _currentIndex,
-        selectedItemColor: const Color.fromARGB(255, 228, 208, 98),
-        unselectedItemColor: Colors.grey,
+      bottomNavigationBar: CurvedNavigationBar(
+        index: _currentIndex,
+        height: 50,
+        items: <Widget>[
+          Icon(Icons.home, size: 30),
+          Icon(Icons.notifications, size: 30),
+          Icon(Icons.sos_outlined, size: 30),
+          Icon(Icons.monetization_on, size: 30),
+          Icon(Icons.settings, size: 30),
+        ],
+        color: Color.,
+        buttonBackgroundColor: Color.fromARGB(255, 228, 208, 98),
+        backgroundColor: Colors.transparent, // Set to transparent or the desired background color
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor:Color.fromARGB(255, 0, 4, 7),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Alerts',
-            backgroundColor:Color.fromARGB(255, 0, 4, 7),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: 'SOS',
-            backgroundColor:Color.fromARGB(255, 0, 4, 7),
-
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.monetization_on),
-            label: 'Donate',
-            backgroundColor:Color.fromARGB(255, 0, 4, 7),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor:Color.fromARGB(255, 0, 4, 7),
-          ),
-        ],
       ),
 
       body: pages[_currentIndex],
